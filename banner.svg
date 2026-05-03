@@ -1,0 +1,184 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060810"/>
+      <stop offset="50%" style="stop-color:#080c18"/>
+      <stop offset="100%" style="stop-color:#04060e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f6ff"/>
+      <stop offset="60%" style="stop-color:#e2e8f0"/>
+      <stop offset="100%" style="stop-color:#94a3b8"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="orbGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="centerGlow" cx="38%" cy="50%" r="45%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#060810;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="rightOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.22"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </radialGradient>
+    <clipPath id="rightClip">
+      <rect x="680" y="0" width="520" height="320"/>
+    </clipPath>
+    <pattern id="hexPat" x="0" y="0" width="40" height="46" patternUnits="userSpaceOnUse">
+      <polygon points="20,2 38,12 38,34 20,44 2,34 2,12" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.07"/>
+    </pattern>
+    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="0.8" cy="0.8" r="0.7" fill="#7c9cbf" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="320" fill="url(#bgGrad)"/>
+  <rect width="1200" height="320" fill="url(#hexPat)"/>
+  <rect width="1200" height="320" fill="url(#dotGrid)"/>
+
+  <!-- Ambient Glows -->
+  <ellipse cx="380" cy="160" rx="320" ry="200" fill="url(#centerGlow)"/>
+  <ellipse cx="950" cy="160" rx="240" ry="180" fill="url(#rightOrb)"/>
+  <circle cx="90" cy="60" r="40" fill="#3b82f6" opacity="0.05" filter="url(#orbGlow)"/>
+  <circle cx="1130" cy="260" r="50" fill="#818cf8" opacity="0.06" filter="url(#orbGlow)"/>
+  <circle cx="600" cy="290" r="30" fill="#38bdf8" opacity="0.06" filter="url(#orbGlow)"/>
+
+  <!-- Decorative Geometry Left -->
+  <circle cx="68" cy="160" r="90" fill="none" stroke="#38bdf8" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="68" cy="160" r="70" fill="none" stroke="#818cf8" stroke-width="0.4" opacity="0.15"/>
+  <line x1="0" y1="0" x2="120" y2="120" stroke="#3b82f6" stroke-width="0.4" opacity="0.12"/>
+  <line x1="20" y1="0" x2="140" y2="120" stroke="#3b82f6" stroke-width="0.4" opacity="0.08"/>
+  <line x1="40" y1="0" x2="160" y2="120" stroke="#3b82f6" stroke-width="0.4" opacity="0.05"/>
+  <line x1="46" y1="150" x2="90" y2="150" stroke="#38bdf8" stroke-width="0.7" opacity="0.5" filter="url(#blueGlow)"/>
+  <line x1="68" y1="128" x2="68" y2="172" stroke="#38bdf8" stroke-width="0.7" opacity="0.5" filter="url(#blueGlow)"/>
+  <circle cx="68" cy="150" r="3" fill="#38bdf8" opacity="0.8" filter="url(#blueGlow)"/>
+
+  <!-- Vertical Accent Bar -->
+  <rect x="148" y="78" width="2.5" height="164" fill="url(#accentGrad)" rx="1.5" filter="url(#blueGlow)"/>
+
+  <!-- Left Text Content -->
+  <!-- Badge -->
+  <rect x="172" y="88" width="178" height="22" rx="11" fill="#0f172a" stroke="#38bdf8" stroke-width="0.7" opacity="0.9"/>
+  <text x="261" y="103" font-family="'SF Mono','Fira Code','Courier New',monospace" font-size="10.5" fill="#38bdf8" text-anchor="middle" letter-spacing="2.5" opacity="0.9">FULL STACK DEVELOPER</text>
+
+  <!-- Name -->
+  <text x="172" y="168" font-family="Georgia,'Palatino',serif" font-size="42" font-weight="700" fill="url(#nameGrad)" letter-spacing="-1.5">Aman Kumar Karn</text>
+
+  <!-- Tagline -->
+  <text x="174" y="200" font-family="'SF Mono','Fira Code',monospace" font-size="12.5" fill="#64748b" letter-spacing="1">Building scalable systems &amp; elegant interfaces.</text>
+
+  <!-- Tech Pills — updated stack -->
+  <rect x="172" y="218" width="62" height="19" rx="9.5" fill="#0f172a" stroke="#3b82f6" stroke-width="0.6"/>
+  <text x="203" y="231" font-family="monospace" font-size="10" fill="#60a5fa" text-anchor="middle" letter-spacing="0.5">TypeScript</text>
+
+  <rect x="242" y="218" width="40" height="19" rx="9.5" fill="#0f172a" stroke="#38bdf8" stroke-width="0.6"/>
+  <text x="262" y="231" font-family="monospace" font-size="10" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.5">React</text>
+
+  <rect x="290" y="218" width="48" height="19" rx="9.5" fill="#0f172a" stroke="#4ade80" stroke-width="0.6"/>
+  <text x="314" y="231" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle" letter-spacing="0.5">Node.js</text>
+
+  <rect x="346" y="218" width="52" height="19" rx="9.5" fill="#0f172a" stroke="#06b6d4" stroke-width="0.6"/>
+  <text x="372" y="231" font-family="monospace" font-size="10" fill="#67e8f9" text-anchor="middle" letter-spacing="0.5">Tailwind</text>
+
+  <rect x="406" y="218" width="44" height="19" rx="9.5" fill="#0f172a" stroke="#60a5fa" stroke-width="0.6"/>
+  <text x="428" y="231" font-family="monospace" font-size="10" fill="#93c5fd" text-anchor="middle" letter-spacing="0.5">Docker</text>
+
+  <rect x="458" y="218" width="52" height="19" rx="9.5" fill="#0f172a" stroke="#818cf8" stroke-width="0.6"/>
+  <text x="484" y="231" font-family="monospace" font-size="10" fill="#a5b4fc" text-anchor="middle" letter-spacing="0.5">Next.js</text>
+
+  <!-- Social row -->
+  <text x="174" y="270" font-family="monospace" font-size="11" fill="#475569" letter-spacing="0.5">◈  linkedin.com/in/amnkarn</text>
+  <text x="174" y="290" font-family="monospace" font-size="11" fill="#475569" letter-spacing="0.5">◈  x.com/amnkarn</text>
+
+  <!-- Divider -->
+  <line x1="650" y1="30" x2="650" y2="290" stroke="#1e293b" stroke-width="0.8" opacity="0.8"/>
+
+  <!-- Right Side — Code Panel -->
+  <g clip-path="url(#rightClip)">
+    <rect x="690" y="38" width="468" height="242" rx="10" fill="#080e1c" stroke="#1e293b" stroke-width="1"/>
+    <rect x="690" y="38" width="468" height="36" rx="10" fill="#0d1526"/>
+    <rect x="690" y="55" width="468" height="19" fill="#0d1526"/>
+    <circle cx="714" cy="56" r="5.5" fill="#ff5f57" opacity="0.9"/>
+    <circle cx="732" cy="56" r="5.5" fill="#febc2e" opacity="0.9"/>
+    <circle cx="750" cy="56" r="5.5" fill="#28c840" opacity="0.9"/>
+    <text x="850" y="60" font-family="monospace" font-size="11" fill="#475569" text-anchor="middle">profile.ts</text>
+
+    <!-- Line numbers -->
+    <g font-family="'SF Mono','Fira Code','Courier New',monospace" font-size="12" opacity="0.25" fill="#64748b">
+      <text x="712" y="96">01</text>
+      <text x="712" y="116">02</text>
+      <text x="712" y="136">03</text>
+      <text x="712" y="156">04</text>
+      <text x="712" y="176">05</text>
+      <text x="712" y="196">06</text>
+      <text x="712" y="216">07</text>
+      <text x="712" y="236">08</text>
+      <text x="712" y="256">09</text>
+    </g>
+
+    <!-- Code — updated stack, no C++ -->
+    <g font-family="'SF Mono','Fira Code','Courier New',monospace" font-size="12.5">
+      <text x="740" y="96">
+        <tspan fill="#818cf8">const </tspan><tspan fill="#e2e8f0">engineer</tspan><tspan fill="#64748b"> = {</tspan>
+      </text>
+      <text x="740" y="116">
+        <tspan fill="#64748b">  name:    </tspan><tspan fill="#86efac">"Aman Kumar Karn"</tspan><tspan fill="#64748b">,</tspan>
+      </text>
+      <text x="740" y="136">
+        <tspan fill="#64748b">  role:    </tspan><tspan fill="#86efac">"Full Stack Dev"</tspan><tspan fill="#64748b">,</tspan>
+      </text>
+      <text x="740" y="156">
+        <tspan fill="#64748b">  stack:   </tspan><tspan fill="#7dd3fc">["TS"</tspan><tspan fill="#64748b">, </tspan><tspan fill="#7dd3fc">"React"</tspan><tspan fill="#64748b">, </tspan><tspan fill="#7dd3fc">"Docker"</tspan><tspan fill="#64748b">],</tspan>
+      </text>
+      <text x="740" y="176">
+        <tspan fill="#64748b">  ui:      </tspan><tspan fill="#67e8f9">"Tailwind CSS"</tspan><tspan fill="#64748b">,</tspan>
+      </text>
+      <text x="740" y="196">
+        <tspan fill="#64748b">  open:    </tspan><tspan fill="#f97316">true</tspan><tspan fill="#64748b">,</tspan>
+      </text>
+      <text x="740" y="216">
+        <tspan fill="#64748b">  coffee:  </tspan><tspan fill="#f97316">Infinity</tspan><tspan fill="#64748b">,</tspan>
+      </text>
+      <text x="740" y="236">
+        <tspan fill="#64748b">};</tspan>
+      </text>
+      <rect x="755" y="248" width="8" height="14" fill="#38bdf8" opacity="0.75" rx="1"/>
+    </g>
+
+    <!-- Status bar -->
+    <rect x="690" y="256" width="468" height="24" rx="0" fill="#060d1a"/>
+    <rect x="690" y="268" width="468" height="12" rx="0" fill="#060d1a"/>
+    <rect x="1148" y="256" width="10" height="24" rx="0" fill="#060d1a"/>
+    <text x="706" y="271" font-family="monospace" font-size="10" fill="#1e4976">TypeScript  ·  UTF-8  ·  profile.ts</text>
+    <circle cx="1130" cy="268" r="3.5" fill="#4ade80" opacity="0.8"/>
+    <text x="1140" y="272" font-family="monospace" font-size="10" fill="#4ade80">ready</text>
+  </g>
+
+  <!-- Decorative Geometry Right -->
+  <line x1="1100" y1="0" x2="1200" y2="100" stroke="#818cf8" stroke-width="0.5" opacity="0.15"/>
+  <line x1="1140" y1="0" x2="1200" y2="60" stroke="#818cf8" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="1160" cy="30" r="2" fill="#818cf8" opacity="0.5"/>
+  <circle cx="1185" cy="55" r="1.5" fill="#38bdf8" opacity="0.4"/>
+  <path d="M 1200 240 A 70 70 0 0 0 1130 320" fill="none" stroke="#6366f1" stroke-width="0.5" opacity="0.2"/>
+  <path d="M 1200 200 A 110 110 0 0 0 1090 320" fill="none" stroke="#6366f1" stroke-width="0.4" opacity="0.12"/>
+
+
+
+  <!-- Floating particles -->
+  <circle cx="520" cy="45" r="1.5" fill="#38bdf8" opacity="0.6"/>
+  <circle cx="555" cy="80" r="1" fill="#818cf8" opacity="0.5"/>
+  <circle cx="480" cy="270" r="1.8" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="540" cy="250" r="1" fill="#a5b4fc" opacity="0.5"/>
+  <circle cx="430" cy="55" r="1.2" fill="#7dd3fc" opacity="0.4"/>
+  <circle cx="460" cy="285" r="1" fill="#818cf8" opacity="0.35"/>
+</svg>
